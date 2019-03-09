@@ -114,8 +114,8 @@ public:
         nMaxMoneyOut = 7000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 1000;
-        nModifierUpdateBlock = 1; // we use the version 2 for SEC
+        nLastPOWBlock = 1500;
+        nModifierUpdateBlock = 1; // We use the version 2 for SEC
 
 		/**
 		
