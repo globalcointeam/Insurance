@@ -57,7 +57,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1551024293, // * UNIX timestamp of last checkpoint block
+    1557854811, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -135,16 +135,15 @@ public:
         nMaxMoneyOut = 7000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 1500;
+        nLastPOWBlock = 350;
         nModifierUpdateBlock = 1; // We use the version 2 for SEC
 
 		/**
-		
-		Merkle root: 79cb9efb49e4f71e6b6b8ba3c817549e45f56192d15ce1d5a691cf0e5f5869f3
-		Nonce: 170208
-		Bits: 504365040
-		Hash: 000001a15e30729b914b58a50ca8b1d4dc8a0183e08496789214527b69729cbb
 
+		Merkle root: 79cb9efb49e4f71e6b6b8ba3c817549e45f56192d15ce1d5a691cf0e5f5869f3
+		Nonce: 1488260
+		Bits: 504365040
+		Hash: 000003af722951118f5f0e9d1dc49863fb721ae32db8e184e2da83d30f6c5709
 		**/
 		
         const char* pszTimestamp = "The Insurance is the best for your money 19/02/2019 for your life";
@@ -158,15 +157,15 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1551024293;
+        genesis.nTime = 1557854811;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 170208;
+        genesis.nNonce = 1488260;
 		
 		//MineGenesis(genesis, bnProofOfWorkLimit);
 		
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x000003af722951118f5f0e9d1dc49863fb721ae32db8e184e2da83d30f6c5709"));
+        assert(genesis.hashMerkleRoot == uint256("0x79cb9efb49e4f71e6b6b8ba3c817549e45f56192d15ce1d5a691cf0e5f5869f3"));
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("207.148.7.125", "207.148.7.125"));
